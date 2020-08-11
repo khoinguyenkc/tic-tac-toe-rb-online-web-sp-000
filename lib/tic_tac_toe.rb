@@ -75,7 +75,7 @@ def turn(board, current_player)
       puts "Please enter 1-9:"
       input = gets.strip
       getthenewmove = input_to_index(input)
-      
+
       inputnowvalid = valid_move?(board, getthenewmove)
       puts inputnowvalid
       #if vaid, input nowvalid becomes true. that will stop the loop.
