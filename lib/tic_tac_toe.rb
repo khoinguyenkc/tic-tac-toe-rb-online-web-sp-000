@@ -63,12 +63,12 @@ def turn(board, current_player)
   if valid_move?(board, index)
     move(board, index, current_player)
     display_board(board)
-  else 
-    until inputnowvalid 
-      getthenewmove = getmove() 
+  else
+    until inputnowvalid
+      getthenewmove = getmove()
       
-    
-    
+
+
   end
 
 end
