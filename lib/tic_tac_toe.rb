@@ -59,7 +59,7 @@ def turn(board)
   index = input_to_index(input)
 
   if valid_move?(board, index)
-    move(board, index)
+    move(board, index, current_player)
     display_board(board)
 
 
@@ -78,7 +78,7 @@ def turn(board)
     end #end of loop
 
     #if loop is finished, take new move and send it in
-    move(board, getthenewmove)
+    move(board, getthenewmove, current_player)
     display_board(board)
   end #end of if & else
 
