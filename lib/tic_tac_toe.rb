@@ -75,13 +75,19 @@ def play(board)
     turn(board, current_player)
 
     boardnotfull = (board.include?(" ") || board.include?(""))
+
+    if over?(board)
+      
+      if won?(board)
+        puts "Congratuations to #{winner(board)}"
+      else #aka a draw
+        puts "Game over. It's a draw"
     #variable must be inside so that e4very loop re calculate the value of boardisfull
     # otherwie it's static
     #crucial
-
-    if !boardnotfull
-      break
-    end
+    #if !boardnotfull
+    #  break
+    #end
 
   end
 end
@@ -160,7 +166,7 @@ puts draw?(wonboard) #false
 
 
 def over?(board)
-  if draw?(board) || won?(board) || full?(board)
+  if draw?(board) || won?(board)
     return true
   else
     return false
