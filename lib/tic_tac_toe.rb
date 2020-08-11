@@ -40,9 +40,9 @@ def full?(board)
 end
 
 def draw?(board)
-  if won?(board) == nil && full?(board)
+  if full?(board) && won?(board) == nil
     return true
-  elsif won?(board) == nil && !full?(board)
+  elsif !full?(board) && won?(board) == nil
     return false
   else full?(board) || !full?(board)
     #ridiculous but it looks like certain boards fail the won and thus the full method was never called and that fails a tests
@@ -132,7 +132,7 @@ miboard = ["X ", " ", " "]
  move(miboard,2, "O")
  move(miboard,1)
  print miboard
- 
+
 def position_taken?(board, location)
   board[location] != " " && board[location] != ""
 end
