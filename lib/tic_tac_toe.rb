@@ -63,10 +63,18 @@ def turn(board, current_player)
   if valid_move?(board, index)
     move(board, index, current_player)
     display_board(board)
+
   else
-    until inputnowvalid
+    inputnowvalid = false
+    until inputnowvalid == true
       getthenewmove = getmove()
-      
+      inputnowvalid = valid_move?(board, getthenewmove)
+      #if vaid, input nowvalid becomes true. that will stop the loop.
+      #othrewise, this keeps going forever
+    end
+    #if loop is finished, take new move and send it in
+    move(board, index, current_player)
+    display_board(board)
 
 
   end
