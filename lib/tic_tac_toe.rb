@@ -129,6 +129,7 @@ def move(board, index, current_player = "X")
 end
 miboard = [ "X", " ", " "]
 move(miboard, 2)
+puts miboard
 def position_taken?(board, location)
   board[location] != " " && board[location] != ""
 end
