@@ -51,13 +51,13 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
-def turn(board)
+def turn(board, current_player)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
 
   if valid_move?(board, index)
-    move(board, index)
+    move(board, index, current_player)
     display_board(board)
   else
     turn(board)
@@ -69,10 +69,10 @@ end
 #BUT, if it's a valid move, it only plays once. the method terminates
 # Define your play method below
 def play(board)
-
+  #A tic tac toe game must allow players to take turns, checking if the game is over after every turn, and at the conclusion of the game, whether because it was won or because it was a draw, reporting to the user the outcome of the game
   loop do
-
-    turn(board)
+    current_player = current_player(board)
+    turn(board, current_player)
 
     boardnotfull = (board.include?(" ") || board.include?(""))
     #variable must be inside so that e4very loop re calculate the value of boardisfull
@@ -175,10 +175,4 @@ def winner(board)
   else
     return board[winningcombo[0]]
   end
-end
-
-
-
-def play(board)
-
 end
