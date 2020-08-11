@@ -145,14 +145,12 @@ end
 def draw?(board)
   if full?(board) && won?(board) == nil
     return true
-  elsif !full?(board) && won?(board) == nil
-    return false
   else
-    #ridiculous but it looks like certain boards fail the won and thus the full method was never called and that fails a tests
-    #weirdly this still says full was not called with that particular board they used for testing
     return false
   end
 end
+#ridiculous but it looks like certain boards fail the won and thus the full method was never called and that fails a tests
+#weirdly this still says full was not called with that particular board they used for testing
 
 drawboard = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
 incomplete_board = ["X", " ", " ", " ", " ", " ", " ", " ", " "]
