@@ -150,7 +150,6 @@ def turn(board)
     move(board, index)
     display_board(board)
   else
-    puts "invalid move"
     turn(board)
   end
 
