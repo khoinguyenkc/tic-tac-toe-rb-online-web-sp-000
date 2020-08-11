@@ -149,9 +149,7 @@ def draw?(board)
     return false
   end
 end
-#ridiculous but it looks like certain boards fail the won and thus the full method was never called and that fails a tests
-#weirdly this still says full was not called with that particular board they used for testing
-
+#super interesting: simplifying the structure gets rid of the error
 drawboard = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
 incomplete_board = ["X", " ", " ", " ", " ", " ", " ", " ", " "]
 wonboard = ["X", "X", "X", " ", " ", " ", " ", " ", " "]
