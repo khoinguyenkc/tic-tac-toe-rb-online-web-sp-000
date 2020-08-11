@@ -51,11 +51,6 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
-def getmove
-  puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
-end
 
 def turn(board, current_player)
   puts "Please enter 1-9:"
@@ -77,15 +72,14 @@ def turn(board, current_player)
       getthenewmove = input_to_index(input)
 
       inputnowvalid = valid_move?(board, getthenewmove)
-      puts inputnowvalid
       #if vaid, input nowvalid becomes true. that will stop the loop.
       #othrewise, this keeps going forever
-    end
+    end #end of loop
 
     #if loop is finished, take new move and send it in
     move(board, getthenewmove, current_player)
     display_board(board)
-  end
+  end #end of if & else
 
 end
 #note on the turn method above:
