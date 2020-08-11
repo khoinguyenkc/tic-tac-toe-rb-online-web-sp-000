@@ -127,7 +127,8 @@ end
 def move(board, index, current_player = "X")
   board[index] = current_player
 end
-
+miboard = [ "X", " ", " "]
+move(miboard, 2)
 def position_taken?(board, location)
   board[location] != " " && board[location] != ""
 end
