@@ -34,9 +34,11 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def move(board, index, current_player = "X")
+def move(board, index, current_player )
   board[index] = current_player
 end
+#the test say your function SHOULD not allow default third
+#which means now it forces you to enter the current player
 #not sure why it says the move? method doesn't allow for a default third argument
 miboard = ["X ", " ", " "]
  move(miboard,2, "O")
@@ -150,6 +152,7 @@ def draw?(board)
   end
 end
 #super interesting: simplifying the structure gets rid of the error
+
 drawboard = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
 incomplete_board = ["X", " ", " ", " ", " ", " ", " ", " ", " "]
 wonboard = ["X", "X", "X", " ", " ", " ", " ", " ", " "]
