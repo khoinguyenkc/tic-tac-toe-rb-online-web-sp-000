@@ -52,13 +52,13 @@ def valid_move?(board, index)
 end
 
 
-def turn(board, current_player)
+def turn(board)
   #puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
 
   if valid_move?(board, index)
-    move(board, index, current_player)
+    move(board, index)
     display_board(board)
 
 
@@ -77,7 +77,7 @@ def turn(board, current_player)
     end #end of loop
 
     #if loop is finished, take new move and send it in
-    move(board, getthenewmove, current_player)
+    move(board, getthenewmove)
     display_board(board)
   end #end of if & else
 
