@@ -147,7 +147,7 @@ def draw?(board)
     return true
   elsif !full?(board) && won?(board) == nil
     return false
-  elsif won?(board) && (full?(board) || !full?(board))
+  else
     #ridiculous but it looks like certain boards fail the won and thus the full method was never called and that fails a tests
     #weirdly this still says full was not called with that particular board they used for testing
     return false
