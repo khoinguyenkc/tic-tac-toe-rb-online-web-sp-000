@@ -73,7 +73,7 @@ def turn(board, current_player)
       #if vaid, input nowvalid becomes true. that will stop the loop.
       #othrewise, this keeps going forever
     end
-    
+
     #if loop is finished, take new move and send it in
     move(board, index, current_player)
     display_board(board)
