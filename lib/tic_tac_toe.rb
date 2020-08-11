@@ -77,7 +77,7 @@ def play(board)
     boardnotfull = (board.include?(" ") || board.include?(""))
 
     if over?(board)
-      
+
       if won?(board)
         puts "Congratuations to #{winner(board)}"
       else #aka a draw
