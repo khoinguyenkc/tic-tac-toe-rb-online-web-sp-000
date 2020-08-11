@@ -128,9 +128,11 @@ def move(board, index, current_player = "X")
   board[index] = current_player
 end
 #not sure why it says the move? method doesn't accept an optional third argument
-miboard = ["X ", "X ", " "]
+miboard = ["X ", " ", " "]
  move(miboard,2, "O")
+ move(miboard,1)
  print miboard
+ 
 def position_taken?(board, location)
   board[location] != " " && board[location] != ""
 end
