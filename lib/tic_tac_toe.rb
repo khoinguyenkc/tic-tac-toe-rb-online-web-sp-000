@@ -70,27 +70,27 @@ end
 # Define your play method below
 def play(board)
   #A tic tac toe game must allow players to take turns, checking if the game is over after every turn, and at the conclusion of the game, whether because it was won or because it was a draw, reporting to the user the outcome of the game
-  loop do
+  until over?(board) do
     current_player = current_player(board)
     turn(board, current_player)
 
-    boardnotfull = (board.include?(" ") || board.include?(""))
-
-    if over?(board)
-      if won?(board)
-        puts "Congratuations to #{winner(board)}"
-      else #aka a draw
-        puts "Game over. It's a draw"
-      end
-    end
-    #variable must be inside so that e4very loop re calculate the value of boardisfull
-    # otherwie it's static
-    #crucial
-    #if !boardnotfull
-    #  break
-    #end
-
   end
+
+  if over?(board)
+    if won?(board)
+      puts "Congratuations to #{winner(board)}"
+    else #aka a draw
+      puts "Game over. It's a draw"
+    end
+  end
+  #boardnotfull = (board.include?(" ") || board.include?(""))
+  #variable must be inside so that e4very loop re calculate the value of boardisfull
+  # otherwie it's static
+  #crucial
+  #if !boardnotfull
+  #  break
+  #end
+
 end
 
 
