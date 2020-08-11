@@ -96,9 +96,9 @@ def play(board)
 
   if over?(board)
     if won?(board)
-      puts "Congratuations to #{winner(board)}"
+      puts "Congratulations #{winner(board)}!"
     else #aka a draw
-      puts "Game over. It's a draw"
+      puts "Cat's Game!"
     end
   end
   #boardnotfull = (board.include?(" ") || board.include?(""))
