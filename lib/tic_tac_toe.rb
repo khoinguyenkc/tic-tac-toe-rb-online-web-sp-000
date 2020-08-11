@@ -41,8 +41,6 @@ end
 #which means now it forces you to enter the current player
 #not sure why it says the move? method doesn't allow for a default third argument
 miboard = ["X ", " ", " "]
- move(miboard,2, "O")
- move(miboard,1)
  print miboard
 
 def position_taken?(board, location)
