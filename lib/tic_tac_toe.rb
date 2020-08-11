@@ -78,7 +78,7 @@ def turn(board, current_player)
     end
 
     #if loop is finished, take new move and send it in
-    move(board, index, current_player)
+    move(board, getthenewmove, current_player)
     display_board(board)
   end
 
